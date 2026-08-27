@@ -85,6 +85,9 @@ h1 { max-width: 850px; margin-bottom: 24px; font-size: clamp(42px, 5.6vw, 76px);
 h2 { margin-bottom: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1; }
 .hero-text { max-width: 660px; color: var(--muted); font-size: 17px; line-height: 1.6; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.availability-note { width: fit-content; max-width: 560px; display: flex; align-items: center; gap: 14px; margin-top: 28px; padding: 13px 16px; border-left: 2px solid var(--accent); background: rgba(216,255,57,.055); }
+.availability-note strong { color: var(--accent); font-size: 13px; letter-spacing: .04em; }
+.availability-note span { color: #d5d9d3; font-size: 12px; font-weight: 700; line-height: 1.4; text-transform: uppercase; }
 
 .cable-art { min-height: 470px; position: relative; opacity: .92; }
 .cable-art::after {
@@ -127,6 +130,9 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1; }
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .project-card { border: 1px solid var(--line); background: var(--panel); overflow: hidden; }
 .project-visual { height: 235px; display: grid; place-items: center; position: relative; overflow: hidden; background-color: #22292b; }
+.project-photo::before, .project-photo::after { display: none; }
+.project-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 52%; filter: saturate(.82) contrast(1.05); transition: transform .5s ease; }
+.project-card:hover .project-photo img { transform: scale(1.035); }
 .project-visual::before, .project-visual::after { content: ""; position: absolute; inset: -30%; border: 1px solid rgba(216,255,57,.16); transform: rotate(25deg); }
 .project-visual::after { inset: -10% 25%; transform: rotate(-28deg); }
 .project-2 { background: repeating-linear-gradient(90deg, #181e20 0 17px, #293034 18px 19px); }
@@ -193,6 +199,8 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1; }
   .hero-actions, .hero-actions .button { width: 100%; }
   .hero-actions { margin-top: 26px; }
   .hero-actions .button { min-height: 52px; padding-inline: 14px; text-align: center; }
+  .availability-note { width: 100%; align-items: flex-start; margin-top: 18px; padding: 12px 14px; }
+  .availability-note span { font-size: 10px; }
   .cable-art { min-height: 170px; margin-bottom: 28px; }
   .cable-art::after { inset: 4% 0; }
   .cable-label { right: 3%; bottom: 2%; }
