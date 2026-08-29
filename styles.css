@@ -131,9 +131,9 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1; }
 .project-card { align-self: start; border: 1px solid var(--line); background: var(--panel); overflow: hidden; }
 .project-visual { display: grid; place-items: center; position: relative; overflow: hidden; background-color: #22292b; }
 .project-visual:not(.project-photo) { height: 235px; }
-.project-visual.project-photo { display: block; }
+.project-visual.project-photo { display: block; height: 420px; }
 .project-photo::before, .project-photo::after { display: none; }
-.project-photo img { width: 100%; height: auto; display: block; filter: saturate(.82) contrast(1.05); transition: transform .5s ease; }
+.project-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; filter: saturate(.82) contrast(1.05); transition: transform .5s ease; }
 .project-card:hover .project-photo img { transform: scale(1.035); }
 .project-visual::before, .project-visual::after { content: ""; position: absolute; inset: -30%; border: 1px solid rgba(216,255,57,.16); transform: rotate(25deg); }
 .project-visual::after { inset: -10% 25%; transform: rotate(-28deg); }
@@ -222,6 +222,8 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.4vw, 46px); line-height: 1; }
   .steps b { margin: 0; }
   .project-grid { gap: 10px; }
   .project-visual:not(.project-photo) { height: 180px; }
+  .project-visual.project-photo { height: auto; }
+  .project-photo img { height: auto; object-fit: contain; }
   .contact-section { padding-block: 64px; }
   .contact-grid { gap: 36px; }
   .contact-details { margin-top: 32px; font-size: 16px; }
